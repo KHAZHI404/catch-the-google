@@ -1,8 +1,7 @@
-
 export function Google() {
     const element = document.createElement('span')
 
-    element.append('G')
+    element.append('GGG')
 
     return element
 }
