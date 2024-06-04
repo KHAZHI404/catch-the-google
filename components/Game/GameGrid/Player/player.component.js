@@ -4,9 +4,10 @@ export function Player(playerNumber) {
 
     validatePlayerNumberOrThrow(playerNumber)
 
-    const element = document.createElement('span')
+    const element = document.createElement('img')
+    element.id = 'img'
 
-    element.append(`PP${playerNumber}`)
+    element.src = `assets/images/player${playerNumber}.png`
 
     return element
 }

@@ -5,7 +5,7 @@ import { Player } from "./Player/player.component.js";
 export function GameGrid() {
     const element = document.createElement('table')
 
-    setGridSize(7, 6);
+    setGridSize(4, 4);
 
     for (let y = 0; y < getGridSize().y; y++) {
         const row = document.createElement('tr')

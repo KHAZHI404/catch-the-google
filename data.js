@@ -16,9 +16,9 @@ const _data = {
     gameState: GAME_STATES.SETTINGS,
     settings: {
         gridSize: {x: 1, y: 1},
-        pointsToWin: 13,
-        pointsToLose: 13,
-        googleJumpInteval: 4000
+        pointsToWin: 3,
+        pointsToLose: 3,
+        googleJumpInteval: 10000
     },
     catch: {
         player1: 0,
@@ -28,8 +28,8 @@ const _data = {
     time: new Date(),
     heroes: {
         google: {x: 0, y: 0},
-        player1: {x: 1, y: 1},
-        player2: {x: 2, y: 2},
+        player1: {x: 0, y: 1},
+        player2: {x: 1, y: 0},
     }
 }
 
@@ -190,9 +190,12 @@ export function movePlayer(playerNumber, direction) {
 }
 
 //getter, selector, query
+export function getCatchPlayer1() {
+    return _data.catch.player1
+}
 
-export function getCatchCount() {
-    return _data.catch
+export function getCatchPlayer2() {
+    return _data.catch.player2
 }
 
 export function getMissCount() {

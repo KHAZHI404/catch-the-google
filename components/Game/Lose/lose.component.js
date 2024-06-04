@@ -1,8 +1,9 @@
-import { getMissCount, playAgain } from "../../../data.js"
+import { getCatchPlayer1, getCatchPlayer2, getMissCount, playAgain } from "../../../data.js"
+import { playLoseSound } from "../Settings/Music/music-settings.components.js"
 
 export function Lose() {
     const element = document.createElement('div')
-    element.append(`You Lose! MISS: ${getMissCount()}`)
+    element.append(`You Luse! Player1: ${getCatchPlayer1()}, Player2: ${getCatchPlayer2()}, Google: ${getMissCount()} `)
 
     const playAgainButton = document.createElement('button')
     playAgainButton.append('PLAY AGAIN')
@@ -12,5 +13,6 @@ export function Lose() {
 
     element.append(playAgainButton)
 
+    playLoseSound()
     return element
 }
